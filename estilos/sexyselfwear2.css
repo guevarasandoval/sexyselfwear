@@ -1,0 +1,376 @@
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+@font-face {
+    font-family: 'leelawadeeregular';
+    src: url('../fonts/leelawad-webfont.eot');
+    src: url('../fonts/leelawad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leelawad-webfont.woff') format('woff'),
+         url('../fonts/leelawad-webfont.ttf') format('truetype'),
+         url('../fonts/leelawad-webfont.svg#leelawadeeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'intrique_script';
+    src: url('../fonts/intriquescript_personaluse-webfont.eot');
+    src: url('../fonts/intriquescript_personaluse-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/intriquescript_personaluse-webfont.woff') format('woff'),
+         url('../fonts/intriquescript_personaluse-webfont.ttf') format('truetype'),
+         url('../fonts/intriquescript_personaluse-webfont.svg#intrique_script_personal_usRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	font-family: 'leelawadeeregular';
+	color: #585858;
+}
+.clear{
+	clear: both;
+}
+header {
+	background-color: #fff;
+	border-bottom: 1px solid #ebebeb;
+	padding-top: 10px;
+}
+	.caja-centro{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.no-borde{
+		border-right: 0 !important;
+	}
+	.ui-cabecera{
+		padding: 10px 0 10px 0;
+	}
+		.ui-title{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.ui-nav-site{
+			display: inline-block;
+			vertical-align: top;
+			padding-top: 30px;
+			padding-left: 60px;
+		}
+		.ui-nav-site ul li{
+			float: left;
+			border-right: 1px solid #d1d1d1;
+			font-size: 14px;
+			color: #fff;
+		}
+		.ui-nav-site ul li.activo{
+			background-color: #BA0066;
+			padding: 5px 15px;
+		}
+		.ui-nav-site ul li a{
+			display: block;
+			text-decoration: none;
+			color: #585858;
+			padding: 5px 15px;
+		}
+		.ui-nav-site ul li a:hover{
+			background-color: #BA0066;
+			color: #fff;
+		}
+			
+			.ui-nav-site-mobile{
+				display: none;
+			}
+		.ui-cuenta{
+			padding-top: 5px;
+			padding-bottom: 10px;
+		}
+			.ui-cuenta p{
+				display: inline-block;
+				vertical-align: top;
+			}
+			.ui-cuenta p a{
+				display: block;
+			text-decoration: none;
+			color: #585858;
+			font-size: 13px;
+			}
+			.ui-cuenta p a:hover{
+				text-decoration: underline;
+			}
+			.ui-cuenta p img{
+				display: inline-block;
+				vertical-align: top;
+			}
+			.ui-carrito{
+				border-right: 1px solid #d1d1d1;
+				padding-right: 8px;
+			}
+			.ui-micuenta{
+				display: inline-block;
+				vertical-align: top;
+				padding-left: 3px;
+			}
+		.ui-redes{
+			float: right;
+			padding-top: 5px;
+		}
+			.ui-siguenos{
+				text-align: right;
+			}
+			.ui-siguenos span{
+				font-size: 13px;
+				height: 32px;
+				line-height: 32px;
+				display: inline-block;
+				vertical-align: top;
+				color: #585858
+			}
+		.ui-redes-mobile{
+			display: none;
+		}
+
+		
+section{
+	background-color: #f2f6f8;
+}
+	.ui-contenido{
+		padding: 20px 10px;
+	}
+	.ui-slider{
+		background: url(../images/bg_section.png) no-repeat;
+	}
+	.ui-slogan{
+		float: right;
+		color: #a0a0a0;
+		font-size: 23px;
+		margin-top: 50px;
+		width: 465px;
+		text-align: center;
+
+	}
+	.ui-promociones{
+		width: 465px;
+		float: right;
+		margin-bottom: 120px;
+		padding-top: 100px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		text-align: right;
+		padding-right: 25px;
+	}
+		.img-slider{
+			width: 100%;
+			
+		}
+	.head-slider{
+		font-size: 40px;
+		
+		color: #4d3b5b;
+		border-bottom: 1px solid #535353;
+		line-height: 50px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		font-weight: light;
+	}
+	.slider-slogan{
+		color: #3f273c;
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+		.slider-slogan span{
+			color: #ed0a70;
+			font-size: 40px;
+			font-weight: bold;
+		}
+	.slider-pie a{
+		font-size: 18px;
+		color: #000000;
+		text-decoration: none;
+	}
+footer{
+	background-color: #333333;
+	padding: 10px 0;
+}
+	.ui-footer{
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+	}
+	.ui-footer p{
+		padding: 5px 0;
+	}
+	.ui-footer p a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.ui-footer p a:hover{
+		text-decoration: underline;
+	}
+	.ui-footer ul{
+		padding: 5px 0;
+	}
+	.ui-footer ul li{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 8px;
+	}
+	.ui-footer li:before{
+		content:url(../images/icon_footer.png);
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.ui-footer li:first-child{
+		content: none;
+	}
+	.ui-footer ul li a{
+		color: #a0a0a0;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	.ui-footer ul li a:hover{
+		text-decoration: underline;
+	}
+
+
+/*----------------accesorios------------------*/
+.ui-contenido h2{
+	color: #BA0066;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.ui-catalogo{
+	border: 1px solid #ebebeb;
+	background-color: #fff;
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+.ui-catalogo p{
+	padding: 10px;
+	font-size: 14px;
+}
+.ui-catalogo p span{
+	font-weight:bold;
+	color: #BA0066;
+}
+	.ui-catalogo-muestra{
+		position: relative;
+	}
+	.lengueta{
+			left:7px;
+			position:absolute;
+			top:239px;
+			width:189px;
+		}
+	.ampliar{
+			left:175px;
+			position:absolute;
+			top:233px;
+			width:22px;
+		}
+
+/*----------------inicia sesion------------------*/
+.breadcrumb{
+	
+	font-size: 12px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+	.breadcrumb a{
+		text-decoration: none;
+		color: #585858;
+		font-weight: normal;
+	}
+	.breadcrumb a:hover{
+		color: #BA0066;
+	}
+.ui-textocualquiera{
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+	.ui-textocualquiera a{
+		text-decoration: none;
+		color: #BA0066;
+		font-weight: bold;
+	}
+	.ui-textocualquiera a:hover{
+		text-decoration: underline;
+	}
+	
+.ui-inicia{
+	border: 1px solid #ebebeb;
+	padding: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+	.ui-inicia input{
+		margin: 10px 0;
+		border: 0;
+		width: 40%;
+		padding: 3px 1px;
+	}
+.ui-inicia a{
+	text-decoration: none;
+	color: #BA0066;
+	font-size: 14px;
+}
+	.botones{
+		background-color: #BA0066!important;;
+		color: #fff!important;;
+		cursor: pointer;
+		padding: 8px 0!important;
+		width: 20% !important;
+	}
+
+
+/*----------------registrate------------------*/
+.ui_registracampo{
+	width: 48%;
+	padding: 0 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+	.labelcampos{
+		padding: 5px 0;
+	}
+	.labelcampos input{
+		margin: 10px 0;
+	    border: 0;
+	    width: 80%;
+	    padding: 3px 1px;
+	    color: #585858;
+	}
+	.labelcampos select{
+		margin: 10px 0;
+	    border: 0;
+	    width: 80%;
+	    padding: 3px 1px;
+	    color: #585858;
+	}
+	.ui-cancelar{
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 18px;
+		padding-right: 40px;
+	}
+
+
+/*----------------mi cuenta------------------*/
+
+.segundabotonera{
+	width: 20%;
+	border: 1px solid #ebebeb;
+	display: inline-block;
+		vertical-align: top;
+}
+.micuenta{
+	width: 76%;
+	margin-left: 3%;
+	border: 1px solid #ebebeb;
+	display: inline-block;
+		vertical-align: top;
+}

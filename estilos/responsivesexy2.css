@@ -1,0 +1,382 @@
+@media (max-width: 960px){
+	.caja-centro{
+		width: 100%;
+		padding: 0 10px;
+	}
+	.ui-nav-site{
+		padding-left: 5%;
+	}
+	.ui-siguenos span{
+		display: none;
+	}
+	.ui-carrito span{
+		display: none;
+	}
+	.ui-micuenta span{
+		display: none;
+	}
+	.ui-slogan{
+		width: 50%;
+		margin-top: 5%;
+	}
+	.ui-promociones{
+		width: 50%;
+		margin-bottom: 17%;
+		padding-top: 6%;
+	}
+
+	.ui-contenido h2 {
+	    font-size: 2em;
+	    margin-bottom: 3%;
+	}
+	.ui-catalogo{
+		width: 23%;
+	}
+		.lengueta{
+			top:93%;
+		}
+		.ampliar{
+			left: 89%;
+			top:91%;
+		}
+	.ui-catalogo {
+	    height: 316px;
+	}
+
+}
+@media (max-width: 940px){
+	.ui-redes{
+		display: none;
+	}
+	.ui-redes-mobile{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 5%;
+	}
+	.ui-siguenos{
+				text-align: center;
+			}
+	.ui-nav-site{
+		float: right;
+		padding-left: 0px;
+	}
+	.ui-catalogo {
+	    height: 316px;
+	}
+}
+@media (max-width: 860px){
+	.ui-redes-mobile{
+		padding-left: 25%;
+	}
+	.ui-nav-site{
+		width: 100%;
+	    /**/right: 6px;
+	    top: 0;
+	    position: absolute;
+	}
+	.ui-nav-site ul{
+		position: absolute;
+		top: 66px;
+		right: 6px;
+		display: none;
+		overflow: hidden;
+		width: 100%;
+		background-color: #fff;
+		z-index: 100000;
+	}
+	.ui-nav-site ul li{
+		float: none;
+		text-align: right;
+		border-bottom: 1px solid #d1d1d1;
+		border-right: 0;
+		display: block;
+			font-size: 14px;
+			color: #fff;
+		}
+	.ui-nav-site-mobile{
+		display: block;
+		float: right;
+		cursor: pointer;
+	}
+	.ui-catalogo {
+	    height: 306px;
+	}
+	.lengueta{
+			left:2%;
+			width:90%;
+		}
+	.ampliar{
+			left: 88%;
+			top:90%;
+		}
+}
+@media (max-width: 800px){
+	
+	.ui-catalogo {
+	    height: 296px;
+	}
+	.ampliar{
+			left: 87%;
+			top:89%;
+		}
+}
+@media (max-width: 770px){
+	.ui-title{
+		z-index: 10;
+	}
+	
+	.ui-slogan{
+		font-size: 1.1em;
+	}
+	.head-slider{
+		font-size: 2.3em;
+	}
+	.slider-slogan{
+		font-size: 2.3em;
+	}
+		.slider-slogan span{
+			font-size: 1em;
+		}
+	.slider-pie a{
+		font-size: 18px;
+		text-decoration: none;
+	}
+	.ui-catalogo {
+	    height: 278px;
+	}
+	.ui-footer p{
+		line-height: 21px;
+	}
+	.ui-footer ul li{
+		padding: 0 2px;
+	}
+	.ui-footer li:before{
+		margin-right: 5px;
+	}
+}
+@media (max-width: 740px){
+	.ui-slider{
+		background: url(../images/bg_section_740.png) no-repeat;
+	}
+	.head-slider{
+		font-size: 2.0em;
+		line-height: 1.5em;
+		padding-bottom: 3%;
+		margin-bottom: 3%;
+	}
+	.slider-slogan{
+		font-size: 2.0em;
+		margin-bottom: 3%;
+	}
+		.slider-slogan span{
+			font-size: 0.8em;
+		}
+	.ampliar{
+			left: 86%;
+		}
+}
+@media (max-width: 710px){
+	.ui-catalogo {
+	    width: 22%;
+	}
+	.lengueta {
+	    top: 92%;
+	}
+	.ampliar {
+	    left: 85%;
+	    top: 87%;
+	}
+}
+@media (max-width: 700px){
+	.ui-slider{
+		background: url(../images/bg_section_700.png) no-repeat;
+	}
+	.ui-catalogo {
+	    height: 262px;
+	}
+	
+}
+@media (max-width: 620px){
+	.ui-slider{
+		background: url(../images/bg_section_620.png) no-repeat;
+	}
+	.ui-title img{
+		width: 95%;
+	}
+	.ui-promociones{
+		width: 45%;
+		margin-bottom: 15%;
+		padding-top: 5%;
+		padding-right: 2.5%;
+	}
+	.head-slider{
+		font-size: 1.8em;
+	}
+	.slider-slogan{
+		font-size: 1.8em;
+	}
+		.slider-slogan span{
+			font-size: 0.8em;
+		}
+
+	.ui-catalogo {
+	    height: 237px;
+	}
+	.lengueta {
+	    top: 91%;
+	}
+	.ampliar {
+	    left: 83%;
+	    top: 86%;
+	}
+	.ui-catalogo p {
+	    font-size: 13px;
+	}
+	.ui-footer ul{
+		display: none;
+	}
+	.ui-inicia input{
+		width: 60%;
+	}
+	.botones{
+		width: 40% !important;
+	}
+	.ui_registracampo{
+		width: 95%;
+		padding: 0 5%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+@media (max-width: 520px){
+	.ui-redes-mobile{
+		padding-left: 15%;
+	}
+	.head-slider{
+		font-size: 1.6em;
+	}
+	.slider-slogan{
+		font-size: 1.6em;
+	}
+		.slider-slogan span{
+			font-size: 0.8em;
+		}
+	.ui-catalogo {
+	    height: 332px;
+	    width: 46%
+	}
+	.lengueta {
+	    top: 93%;
+	}
+	.ampliar {
+	    left: 90%;
+	    top: 91%;
+	}
+}
+@media (max-width: 480px){
+	.ui-slider{
+		background: url(../images/bg_section_480.png) no-repeat;
+	}
+	.head-slider{
+		font-size: 1.4em;
+	}
+	.slider-slogan{
+		font-size: 1.4em;
+	}
+		.slider-slogan span{
+			font-size: 0.8em;
+		}
+	.ui-catalogo {
+	    height: 311px;
+	}
+	.ampliar {
+	    left: 89%;
+	}
+}
+@media (max-width: 420px){
+	.ui-redes-mobile{
+		padding-left: 8%;
+	}
+	.ui-slider{
+		background: url(../images/bg_section_520.png) no-repeat;
+	}
+	.ui-slogan{
+		font-size: 0.9em;
+	}
+	.head-slider{
+		font-size: 1.3em;
+		line-height: 1.2em;
+	}
+	.slider-slogan{
+		font-size: 1.3em;
+	}
+		.slider-slogan span{
+			font-size: 0.9em;
+		}
+	.slider-pie a{
+		font-size: 1.0em;
+	}
+	.ui-catalogo {
+	    height: 287px;
+	}
+	.ampliar {
+	    left: 88%;
+	    top: 89%;
+	}
+	.botones{
+		width: 50% !important;
+	}
+}
+@media (max-width: 380px){
+	.ui-slider{
+		background: url(../images/bg_section_380.png) no-repeat;
+	}
+	.head-slider{
+		font-size: 1.0em;
+		line-height: 1.2em;
+	}
+	.slider-slogan{
+		font-size: 1.0em;
+	}
+		.slider-slogan span{
+			font-size: 0.9em;
+		}
+	.ui-catalogo {
+	    height: 258px;
+	}
+	.lengueta {
+	    top: 92%;
+	}
+	.ampliar {
+	    left: 85%;
+	    top: 88%;
+	}
+}
+@media (max-width: 350px){
+	.ui-catalogo {
+	    width: 45%;
+	    height: 239px;
+	}
+	.lengueta {
+	    top: 91%;
+	}
+	.ampliar {
+	    left: 84%;
+	    top: 86%;
+	}
+}
+@media (max-width: 320px){
+	.ui-catalogo {
+	    height: 219px;
+	}
+	.ui-catalogo p {
+	    font-size: 12px;
+	}
+	.lengueta {
+	    top: 90%;
+	}
+	.ampliar {
+	    left: 82%;
+	    top: 85%;
+	}
+}

@@ -1,0 +1,180 @@
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+@font-face {
+    font-family: 'leelawadeeregular';
+    src: url('../fonts/leelawad-webfont.eot');
+    src: url('../fonts/leelawad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leelawad-webfont.woff') format('woff'),
+         url('../fonts/leelawad-webfont.ttf') format('truetype'),
+         url('../fonts/leelawad-webfont.svg#leelawadeeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'intrique_script';
+    src: url('../fonts/intriquescript_personaluse-webfont.eot');
+    src: url('../fonts/intriquescript_personaluse-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/intriquescript_personaluse-webfont.woff') format('woff'),
+         url('../fonts/intriquescript_personaluse-webfont.ttf') format('truetype'),
+         url('../fonts/intriquescript_personaluse-webfont.svg#intrique_script_personal_usRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	font-family: 'leelawadeeregular';
+}
+.clear{
+	clear: both;
+}
+header {
+	background-color: #333333;
+}
+	.caja-centro{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.no-borde{
+		border-right: 0 !important;
+	}
+	.ui-cabecera{
+		padding: 15px 0 7px 0;
+		color: #fff;
+	}
+		.ui-redes{
+			float: left;
+			position: relative;
+		}
+			.ui-siguenos{
+				font-size: 13px;
+				height: 32px;
+				line-height: 32px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		.ui-nav-site{
+			float: right;
+		}
+		.ui-nav-site ul li{
+			float: left;
+			border-right: 1px solid #fff;
+			font-size: 14px;
+			color: #fff;
+		}
+		.ui-nav-site ul li.activo{
+			background-color: #BA0066;
+			padding: 8px 16px;
+		}
+		.ui-nav-site ul li a{
+			display: block;
+			text-decoration: none;
+			color: #fff;
+			padding: 8px 16px;
+		}
+		.ui-nav-site ul li a:hover{
+			background-color: #BA0066;
+		}
+			.ui-nav-site li ul{
+				display: none;
+				position: absolute;
+			}
+			.ui-nav-site li ul li{
+				background-color: #BA0066;
+				border-bottom:  1px solid #e2e2e2;
+				border-left: none!important;
+				margin: 0;
+				width: 120px;
+				display: block;
+			}
+			.ui-nav-site li ul li a:before{
+				content:url(../images/isotipo_vinieta.png);
+				margin-right: 5px;
+				display: inline-block;
+			}
+			.ui-nav-site li ul li:hover{
+				display: block;
+				text-decoration: underline;
+			}
+			.ui-nav-site li:hover ul{
+				display: block;
+			}
+			.ui-nav-site-mobile{
+				display: none;
+			}
+section{
+	background: url(../images/cream_pixels.png) repeat;
+}
+	.ui-contenido{
+		padding: 25px 0;
+	}
+	.ui-title{
+		font-family: 'intrique_script';
+		text-align: center;
+		color: #444242;
+		font-size: 60px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.ui-slogan{
+		float: right;
+		color: #a0a0a0;
+		font-size: 23px;
+		padding-top: 79px;
+	}
+	.ui-banner{
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 20px;
+	}
+		.img-slider{
+			width: 100%;
+			
+		}
+footer{
+	background-color: #333333;
+	padding: 10px 0;
+}
+	.ui-footer{
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+	}
+	.ui-footer p{
+		padding: 5px 0;
+	}
+	.ui-footer p a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.ui-footer p a:hover{
+		text-decoration: underline;
+	}
+	.ui-footer ul{
+		padding: 5px 0;
+	}
+	.ui-footer ul li{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 8px;
+	}
+	.ui-footer li:before{
+		content:url(../images/icon_footer.png);
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.ui-footer li:first-child{
+		content: none;
+	}
+	.ui-footer ul li a{
+		color: #a0a0a0;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	.ui-footer ul li a:hover{
+		text-decoration: underline;
+	}
