@@ -55,7 +55,7 @@ header {
 		.ui-nav-site{
 			display: inline-block;
 			vertical-align: top;
-			padding-top: 30px;
+			margin-top: 30px;
 			padding-left: 60px;
 		}
 		.ui-nav-site ul li{
@@ -85,13 +85,15 @@ header {
 		.ui-cuenta{
 			padding-top: 5px;
 			padding-bottom: 10px;
+			text-align: right;
 		}
 			.ui-cuenta p{
 				display: inline-block;
 				vertical-align: top;
+
 			}
 			.ui-cuenta p a{
-				display: block;
+				/*display: block;*/
 			text-decoration: none;
 			color: #585858;
 			font-size: 13px;
@@ -104,8 +106,9 @@ header {
 				vertical-align: top;
 			}
 			.ui-carrito{
-				border-right: 1px solid #d1d1d1;
-				padding-right: 8px;
+				padding-right: 0px;
+				display: inline-block;
+				vertical-align: top;
 			}
 			.ui-micuenta{
 				display: inline-block;
@@ -301,11 +304,31 @@ footer{
 		text-decoration: underline;
 	}
 	
+
+
+
+/*--------------------------------*/	
+.botones{
+		background-color: #BA0066;
+		color: #fff;
+		cursor: pointer;
+		padding: 10px 30px!important;
+		border: 0;
+		-webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+			border-radius: 3px;
+	}
+.subti{
+	font-weight: bold;
+}
+/*--------------------------------*/
+
+/*----------------realiza compra------------------*/
 .ui-inicia{
 	border: 1px solid #ebebeb;
 	padding: 20px;
 	margin-top: 10px;
-	text-align: center;
+	font-size: 15px;
 }
 	.ui-inicia input{
 		margin: 10px 0;
@@ -318,38 +341,48 @@ footer{
 	color: #BA0066;
 	font-size: 14px;
 }
-	.botones{
-		background-color: #BA0066!important;;
-		color: #fff!important;;
-		cursor: pointer;
-		padding: 8px 0!important;
-		width: 20% !important;
-	}
-
-
-/*----------------registrate------------------*/
+.ui-subti-realizacompra{
+	padding: 5px 0;
+	border-bottom: 1px solid #585858;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	font-size: 15px; 
+	font-weight: bold;
+}
 .ui_registracampo{
 	width: 48%;
 	padding: 0 5%;
 	display: inline-block;
 	vertical-align: top;
 }
+.ui_registracampo p{
+	font-size: 14px;
+	margin-bottom: 18px;
+}
 	.labelcampos{
 		padding: 5px 0;
 	}
+	.labelcampos span{
+		color: #BA0066;
+	}
 	.labelcampos input{
 		margin: 10px 0;
-	    border: 0;
 	    width: 80%;
 	    padding: 3px 1px;
 	    color: #585858;
+	    -webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+			border-radius: 3px;
+		border: 1px solid #585858;
 	}
 	.labelcampos select{
 		margin: 10px 0;
-	    border: 0;
 	    width: 80%;
 	    padding: 3px 1px;
 	    color: #585858;
+	    -webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+			border-radius: 3px;
 	}
 	.ui-cancelar{
 		display: inline-block;
@@ -357,6 +390,9 @@ footer{
 		padding-top: 18px;
 		padding-right: 40px;
 	}
+.ui-realiza-confirma{
+	text-align: center;
+}
 
 
 /*----------------mi cuenta------------------*/
@@ -374,3 +410,174 @@ footer{
 	display: inline-block;
 		vertical-align: top;
 }
+
+
+/*----------------carrito------------------*/
+
+.ui-carrito-compra{
+	width: 960px;
+	border: 1px solid #ebebeb;
+	background-color: #f9fbfc;
+	padding: 5px;
+}
+	.ui-productocarrito{
+		width: 120px;
+		display: inline-block;
+		vertical-align: top;
+		padding-right: 25px;
+	}
+	.ui-detalleproductocarrito{
+		display: inline-block;
+		vertical-align: top;
+		width: 550px;
+		text-align: center;
+	}
+		.ui-detalleproductocarrito p{
+			padding: 4px 0;
+		}
+		.nombreproductocarrito{
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.tallaproductocarrito{
+			font-size: 14px;
+			color: #BA0066;
+		}
+		.tallaproductocarrito span{
+			color: #585858;
+		}
+		.precioproductocarrito{
+			font-size: 14px;
+			color: #BA0066;
+		}
+	
+	.ui-subtotalcarrito{
+		display: inline-block;
+		vertical-align: top;
+		width: 250px;
+		font-size: 14px;
+		text-align: center;
+		padding-top: 30px;
+	}
+	.ui-subtotalcarrito span{
+		font-size: 15px;
+			color: #BA0066;
+	}
+	.ui-eliminarcarrito a{
+		font-size: 13px;
+		color: #BA0066;
+		text-decoration: none;
+		padding: 8px 0;
+		display: block;
+	}
+.ui-subtotalfinalcarrito{
+	float: right;
+	margin: 10px 0;
+	text-align: center;
+	width: 250px;
+	font-size: 14px;
+}
+.ui-subtotalfinalcarrito p{
+	padding: 8px 0;
+}
+.ui-subtotalfinalcarrito .subtotal{
+	font-weight: bold;
+}
+.ui-subtotalfinalcarrito .subtotal span{
+	color: #BA0066;
+}
+.ui-subtotalfinalcarrito .flete{
+	margin-bottom: 15px;
+}
+.ui-subtotalfinalcarrito .flete span{
+	color: #BA0066;
+}
+
+/*----------------confirmar pedido-----------------*/
+
+.ui-carrito-confirmar{
+	width: 99%;
+	border: 1px solid #ebebeb;
+	background-color: #f9fbfc;
+	padding: 5px;
+}
+.ui_confirmacampo{
+	width: 49%;
+	padding: 0 1%;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+}
+.ui_confirmacampo p{
+	margin-bottom: 10px;
+}
+	.ui-carritoconfimar-separacion{
+		border-bottom: 1px solid #ebebeb;
+		width: 100%;
+		margin: 2px 0;
+	}
+	.ui-productocarrito-confirmar{
+		width: 15%;
+		display: inline-block;
+		vertical-align: top;
+		padding-right: 10px;
+	}
+	.ui-detalleproductocarrito-confirmar{
+		display: inline-block;
+		vertical-align: top;
+		width: 35%;
+	}
+		.nombrecarrito-confirmar{
+			font-size: 14px;
+		}
+	.ui-preciouno-confirmar{
+		display: inline-block;
+		vertical-align: top;
+		width: 21%;
+		text-align: center;
+	}
+	.ui-cantidad-confirmar{
+		display: inline-block;
+		vertical-align: top;
+		width: 15%;
+		text-align: center;
+	}
+	.ui-subtotalcarrito-confirmar{
+		display: inline-block;
+		vertical-align: top;
+		width: 20%;
+		font-size: 14px;
+		text-align: center;
+	}
+		.ui-subtotalcarrito-confirmar span{
+			color: #BA0066;
+		}
+	.ui-subtotalconfirmanombres{
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+		margin: 10px 0;
+		text-align: center;
+		width: 60%;
+		font-size: 14px;
+		text-align: right;
+	}
+		.ui-subtotalconfirmanombres .total{
+			font-weight: bold;
+			font-size: 15px;
+		}
+	.ui-subtotalconfirmacarrito{
+		display: inline-block;
+		vertical-align: top;
+		float: right;
+		margin: 10px 0;
+		text-align: center!important;
+		width: 25%;
+		font-size: 14px;
+		text-align: right;
+		color: #BA0066;
+	}
+		.ui-subtotalconfirmacarrito .total{
+			font-weight: bold;
+			font-size: 15px;
+		}

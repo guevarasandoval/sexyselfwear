@@ -34,25 +34,49 @@
 	/*top:25px;*/
 	width:29px;
 }
-.productoimg{
-	border:1px solid #BA0066;
-	display: inline-block;
-	vertical-align: top;
-}
 
 .intabdiv {
 	padding: 0 20px;
 }
 .prodescrip{
+	/*display: inline-block;
+	vertical-align: top;
+	padding-left:40px;*/
+	width:670px;
+}
+.productoimg{
+	border:1px solid #BA0066;
 	display: inline-block;
 	vertical-align: top;
-	padding-left:40px;
-	width:235px;
+	width: 230px;
+	margin-right: 25px;
 }
+
+.datosproduc{
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+}
+.ui-cantidadproductocarrito{
+		display: inline-block;
+		vertical-align: top;
+		width: 200px;
+		padding-top: 15px;
+		font-size: 14px;
+		color: #BA0066;
+	}
+		.ui-cantidadproductocarrito select{
+			color: #585858;
+			-webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+			border-radius: 3px;
+			padding: 2px 3px;
+		}
 .intabdiv  h2 {
 	color:#BA0066;
 	font-size:15px;
 	font-weight:bold;
+	text-align: center;
 }
 .intabdiv  h3 {
 	color:#BA0066;
@@ -63,13 +87,15 @@
 	font-size:13px;
 	color:#5b5b5b;
 	font-family:Arial, Helvetica, sans-serif;
-	line-height:20px;
+	padding: 7px 0;
+}
+.precioproducto{
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
 }
 .btncomprar{
 	margin:15px auto 15px auto;
-	background-color: #BA0066;
-	display: block;
-	text-align: center;
 	padding: 5px 12px;
 	width: 200px;
 }
@@ -80,29 +106,41 @@
 	}
 @media (max-width: 960px){
 	.popupbox {
-		width:75%;
-	}
-	.productoimg{
-		width: 45%
+		width:90%;
 	}
 	.prodescrip {
-	    padding-left: 6%;
-	    width: 45%;
+	    padding-left: 0;
+	    width: 95%;
+	}
+	.productoimg{
+		width: 38%;
+		margin-right: 3%;
+	}
+	.datosproduc{
+		width: 50%;
 	}
 	.btncomprar {
-	    width: 25%;
+	    width: 75%;
+	    padding: 5px 0;
 	}
 }
-@media (max-width: 710px){
+@media (max-width: 780px){
 	.productoimg{
-		width: 40%
+		width: 20%;
+		margin-right: 3%;
 	}
-	.prodescrip {
-	    padding-left: 5%;
-	    width: 50%;
+	.datosproduc{
+		width: 70%;
 	}
+		.ui-cantidadproductocarrito{
+			width: 90%;
+			padding-top: 15px;
+		}
+}
+@media (max-width: 710px){
+	
 	.btncomprar {
-	    width: 35%;
+	    /*width: 45%;*/
 	}
 }
 @media (max-width: 620px){

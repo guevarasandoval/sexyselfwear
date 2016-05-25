@@ -20,6 +20,7 @@
 <body>
 	<header class="ui-cabecera">
 		<div class="caja-centro">
+			
 			<h1 class="ui-title">
 				<img src="images/logo_internas.png" class="img-slider">
 			</h1>
@@ -29,14 +30,14 @@
 					<p class="ui-carrito"><a href="carrito.html"><img src="images/icon-carrito.png"> <span>(0)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
 				</div>
 			</div>
-			
+
 			<div class="ui-nav-site">
 				<p class="ui-nav-site-mobile" id="mostrarmenu">
 					<img src="images/icon_menu.png">
 				</p>
 				<ul id="menusite">
 					<li><a href="index.html">Home</a></li>
-					<li class="activo">Accesorios</li>
+					<li><a href="accesorios.html">Accesorios</a></li>
 					<li><a href="">Moda Casual</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Sleep</a></li>
@@ -58,44 +59,84 @@
 	</header>
 	<section>
 		<div class="caja-centro">
+
 			<div class="ui-contenido">
-				<h2>ACCESORIOS</h2>
-				<div class="ui-catalogo">
-					<div class="ui-catalogo-muestra"><img src="images/catalogo/ac_001_s.png" class="img-slider">
-						<div class="lengueta"><img src="images/catalogo_lengueta.png" class="img-slider"></div>
-						<div class="ampliar"><a href="#" rel="popuprel1" class="popup"><img src="images/ampliar_mas.gif"></a></div>
-					</div>
-					
-					<p><span>Bolsa de lavado de poliéster</span><br>S/.29.00</p>
-				</div>
-				<div class="ui-catalogo">
-                    <div class="ui-catalogo-muestra"><img src="images/catalogo/ac_002_s.jpg" class="img-slider">
-						<div class="lengueta"><img src="images/catalogo_lengueta.png" class="img-slider"></div>
-						<div class="ampliar"><a href="#" rel="popuprel1" class="popup"><img src="images/ampliar_mas.gif"></a></div>
-					</div>
-					<p><span  class="txtsubtitu">Broches extensores</span><br>S/.15.00</p>
-				</div>
+				
+				<h2><img src="images/bolsa-compra.png"> Realizar compra: Datos de Envío</h2>
+				
 
-				<div class="ui-catalogo">
-					<div class="ui-catalogo-muestra"><img src="images/catalogo/ac_001_s.png" class="img-slider">
-						<div class="lengueta"><img src="images/catalogo_lengueta.png" class="img-slider"></div>
-						<div class="ampliar"><a href="#" rel="popuprel1" class="popup"><img src="images/ampliar_mas.gif"></a></div>
-					</div>
-					
-					<p><span>Bolsa de lavado de poliéster</span><br>S/.29.00</p>
-				</div>
-				<div class="ui-catalogo">
-                    <div class="ui-catalogo-muestra"><img src="images/catalogo/ac_002_s.jpg" class="img-slider">
-						<div class="lengueta"><img src="images/catalogo_lengueta.png" class="img-slider"></div>
-						<div class="ampliar"><a href="#" rel="popuprel1" class="popup"><img src="images/ampliar_mas.gif"></a></div>
-					</div>
-					<p><span  class="txtsubtitu">Broches extensores</span><br>S/.15.00</p>
-				</div>
+				<div class="ui-inicia">
+					<form action="">
 
+						<div class="ui_registracampo">
+							<p class="ui-subti-realizacompra">Datos de destinatario</p>
+							<p>Ingrese los datos de la persona que recibirá la compra </p>
+							<div class="labelcampos">
+								<label>Nombres: <span>*</span></label><br>
+								<input type="text"></input><br>
+							</div>
+							<div class="labelcampos">
+								<label>Apellidos: <span>*</span></label><br>
+								<input type="text"></input><br>
+							</div>
+							<div class="labelcampos">
+								<label>Email: <span>*</span></label><br>
+								<input type="text"></input><br>
+							</div>
+							<div class="labelcampos">
+								<label>Teléfono: <span>*</span></label><br>
+								<input type="text"></input><br>
+							</div>
+							
+						</div>
+						<div class="ui_registracampo">
+							<p class="ui-subti-realizacompra">Dirección de Envío</p>
+							<p>Ingrese la dirección donde quieren que envien su compra </p>
+							<div class="labelcampos">
+								<label>Departamento: <span>*</span></label><br>
+								<select name="departamento">
+								  <option>Seleccione un departamento</option>
+								  <option value="saab">Amazonas</option>
+								  <option value="fiat">Cajamarca</option>
+								  <option value="audi">Lima</option>
+								</select>
+							</div>
+							<div class="labelcampos">
+								<label>Provincia: <span>*</span></label><br>
+								<select name="departamento">
+								  <option>Seleccione una Provincia</option>
+								  <option value="saab">Amazonas</option>
+								  <option value="fiat">Cajamarca</option>
+								  <option value="audi">Lima</option>
+								</select>
+							</div>
+							<div class="labelcampos">
+								<label>Distrito: <span>*</span></label><br>
+								<select name="departamento">
+								  <option>Seleccione un Distrito</option>
+								  <option value="saab">Amazonas</option>
+								  <option value="fiat">Cajamarca</option>
+								  <option value="audi">Lima</option>
+								</select>
+							</div>
+							<div class="labelcampos">
+								<label>Dirección: <span>*</span></label><br>
+								<input type="text"></input>
+							</div>
+							<div class="labelcampos">
+								<label>Referencia: <span>*</span></label><br>
+								<input type="text"></input>
+							</div>
+							
+						</div>
+						<div class="ui-realiza-confirma">
+							<a href="confirmar_compra.html"><input type="button" value="Confirmar pedido" class="botones"></input></a>
+						</div>
+					</form>
+				</div>
 
 
 			</div>
-			
 			
 		</div>
 		
@@ -130,51 +171,14 @@
 	<div class="popupbox" id="popuprel1">
         <div style="text-align: right;"><a href="#" class="close"><img src="images/close.gif"></a></div>
         <div class="intabdiv">
-            
+            <div class="productoimg"><img src="images/catalogo/ac_001_l.png" class="img-slider"></div>
             <div class="prodescrip">
-                <h2>Bolsa de lavado de poliéster</h2>
-                <p class="precioproducto">S/.29.00</p>
-                <h3>Descripción:</h3>
-                <p>Con cierre y con dos estructuras para dar mayor soporte, una en la parte superior y otra en la parte inferior.</p>
-                
-            </div>
-            <div class="productoimg">
-            	<img src="images/catalogo/ac_001_l.png" class="img-slider"></div>
-            <div class="datosproduc">
-            	<form>
-                	<div class="ui-cantidadproductocarrito">
-						Cantidad:
-						<select name="cantidadproducto">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>3</option>
-						</select>
-					</div>
-					<div class="ui-cantidadproductocarrito">
-						Talla:
-						<select name="talaproducto">
-							<option>Selecciona talla</option>
-							<option>34</option>
-							<option>36</option>
-							<option>38</option>
-						</select>
-					</div>
-					<div class="ui-cantidadproductocarrito">
-						Color:
-						<select name="talaproducto">
-							<option>Selecciona color</option>
-							<option>Blanco</option>
-							<option>Habano</option>
-							<option>Negro</option>
-						</select>
-					</div>
-				</form> 
+                      <h2>Bolsa de lavado de poliéster S/.29.00</h2>
+                      <h3>Descripción:</h3>
+                      <p>Con cierre y con dos estructuras para dar mayor soporte, una en la parte superior y otra en la parte inferior.</p> 
             </div>
         </div>
-        <div class="btncomprar">
-        	<input type="button" value="Agregar al carrito" class="botones"></input>
-        </div>
+        <div class="btncomprar"><a href="#">Agregar al carrito</a></div>
 	</div>
 	<!-- producto 2 -->
 	<div class="popupbox" id="popuprel2">
@@ -198,6 +202,4 @@
 
 </body>
 
-<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 </html>

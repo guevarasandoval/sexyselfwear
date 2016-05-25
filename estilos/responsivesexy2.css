@@ -10,7 +10,7 @@
 		display: none;
 	}
 	.ui-carrito span{
-		display: none;
+		/*display: none;*/
 	}
 	.ui-micuenta span{
 		display: none;
@@ -42,32 +42,44 @@
 	.ui-catalogo {
 	    height: 316px;
 	}
+	/*-----carrito------*/
+	.ui-carrito-compra{
+		width: 100%;
+	}
+		.ui-productocarrito{
+			width: 13%;
+			padding-right: 3%;
+		}
+		.ui-detalleproductocarrito{
+			width: 60%;
+		}
+		.ui-subtotalcarrito{
+			width: 25%;
+			padding-top: 5%;
+		}
+	.ui-subtotalfinalcarrito{
+		width: 25%;
+	}
+	/*-----carrito------*/
 
 }
 @media (max-width: 940px){
+	.ui-catalogo {
+	    height: 316px;
+	}
+}
+@media (max-width: 860px){
 	.ui-redes{
 		display: none;
 	}
 	.ui-redes-mobile{
 		display: inline-block;
 		vertical-align: top;
-		padding-left: 5%;
+		padding-left: 25%;
 	}
 	.ui-siguenos{
 				text-align: center;
 			}
-	.ui-nav-site{
-		float: right;
-		padding-left: 0px;
-	}
-	.ui-catalogo {
-	    height: 316px;
-	}
-}
-@media (max-width: 860px){
-	.ui-redes-mobile{
-		padding-left: 25%;
-	}
 	.ui-nav-site{
 		width: 100%;
 	    /**/right: 6px;
@@ -76,7 +88,7 @@
 	}
 	.ui-nav-site ul{
 		position: absolute;
-		top: 66px;
+		top: 32px;
 		right: 6px;
 		display: none;
 		overflow: hidden;
@@ -174,6 +186,9 @@
 	.ampliar{
 			left: 86%;
 		}
+	.ui_confirmacampo{
+		width: 98%;
+	}
 }
 @media (max-width: 710px){
 	.ui-catalogo {
@@ -194,6 +209,25 @@
 	.ui-catalogo {
 	    height: 262px;
 	}
+	/*-----carrito------*/
+	.ui-carrito-compra{
+		width: 100%;
+	}
+		.ui-productocarrito{
+			width: 25%;
+			padding-right: 3%;
+		}
+		.ui-detalleproductocarrito{
+			width: 73%;
+		}
+		.ui-subtotalcarrito{
+			width: 95%;
+			padding-top: 5%;
+		}
+	.ui-subtotalfinalcarrito{
+		width: 97%;
+	}
+	/*-----carrito------*/
 	
 }
 @media (max-width: 620px){
@@ -238,9 +272,7 @@
 	.ui-inicia input{
 		width: 60%;
 	}
-	.botones{
-		width: 40% !important;
-	}
+	
 	.ui_registracampo{
 		width: 95%;
 		padding: 0 5%;
@@ -323,11 +355,12 @@
 	    left: 88%;
 	    top: 89%;
 	}
-	.botones{
-		width: 50% !important;
-	}
+	
 }
 @media (max-width: 380px){
+	.ui-redes-mobile{
+		padding-left: 3%;
+	}
 	.ui-slider{
 		background: url(../images/bg_section_380.png) no-repeat;
 	}
@@ -351,6 +384,9 @@
 	    left: 85%;
 	    top: 88%;
 	}
+	.ui-inicia{
+		padding: 5px;
+	}
 }
 @media (max-width: 350px){
 	.ui-catalogo {
@@ -364,6 +400,27 @@
 	    left: 84%;
 	    top: 86%;
 	}
+	/*-----carrito------*/
+	.ui-carrito-compra{
+		width: 100%;
+	}
+		.ui-productocarrito{
+			width: 84%;
+			padding: 0 7% 0 15%;
+			text-align: center;
+		}
+		.ui-detalleproductocarrito{
+			width: 95%;
+		}
+		.ui-subtotalcarrito{
+			width: 95%;
+			padding-top: 5%;
+		}
+	.ui-subtotalfinalcarrito{
+		float: none;
+		width: 95%;
+	}
+	/*-----carrito------*/
 }
 @media (max-width: 320px){
 	.ui-catalogo {
