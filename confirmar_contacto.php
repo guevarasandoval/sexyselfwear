@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include 'logic/carrito.php';
+$carrito = new Carrito();
+?>
 <html>
 <head>
 	<title>Siéntete tu misma, vístete sexy</title>
@@ -27,7 +31,7 @@
 			
 			<div class="ui-redes-mobile">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="carrito.html"><img src="images/icon-carrito.png"> <span>(0)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><img src="images/icon-carrito.png"> <span>(<?php echo $carrito->articulos_total(); ?>)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
 				</div>
 			</div>
 
@@ -36,8 +40,8 @@
 					<img src="images/icon_menu.png">
 				</p>
 				<ul id="menusite">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="accesorios.html">Accesorios</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="accesorios.php">Accesorios</a></li>
 					<li><a href="">Moda Casual</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Sleep</a></li>
@@ -46,7 +50,7 @@
 			</div>
 			<div class="ui-redes">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="carrito.html"><span>Carrito (0)</span> <img src="images/icon-carrito.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><span>Carrito (<?php echo $carrito->articulos_total(); ?>)</span> <img src="images/icon-carrito.png"></a></p>
 				</div>
 				<div class="ui-siguenos">
 					<span>Síguenos en</span>
@@ -61,48 +65,33 @@
 		<div class="caja-centro">
 
 			<div class="ui-contenido">
-				<div class="breadcrumb">
-					<p><a href="index.html">Inicio</a> > Mi carrito</p>
-				</div>
-				<h2>MI CARRITO</h2>
+				
+				<h2><img src="images/bolsa-compra.png"> Solicitud de Contacto</h2>
 				
 
-				<div class="ui-carrito-compra">
-					<div class="ui-productocarrito">
-						<img src="images/catalogo/ac_001_s.png" class="img-slider">
-					</div>
-					<div class="ui-detalleproductocarrito">
-						<p class="nombreproductocarrito">
-							Bolsa de lavado de poliéster
-						</p>
-						<p class="tallaproductocarrito">
-							Talla: <span>12</span>
-						</p>
-						<p class="tallaproductocarrito">
-							Color: <span>122</span>
-						</p>
-						<p class="precioproductocarrito">
-							S/.29.00
-						</p>
-						<p class="tallaproductocarrito">
-							Cantidad: <span>1</span>
-						</p>
-					</div>
-					
-					<div class="ui-subtotalcarrito">
-						<p>Subtotal: <span>S/.29.00</span></p>
-						<p class="ui-eliminarcarrito"><span><a href="">x  Eliminar</a></span></p>
-					</div>
+				<div class="ui-inicia">
+					<form action="">
+
+						<div class="ui_confirmacampo">
+							<p class="ui-subti-realizacompra">Pedido:</p>
+							<p>Se ha recibido conforme su solicitud de Contacto , en breve le responderemos.</p>
+													
+							
+							
+							<div class="clear"></div>
+
+							
+							
+						</div>
+						
+							
+						
+						
+					</form>
 				</div>
-				<div class="clear"></div>
-				<div class="ui-subtotalfinalcarrito">
-					<p class="subtotal">SUBTOTAL: <span>S/.29.00</span></p>
-					<p class="flete">Gastos de envío (flete): <span> por calcular</span></p>
-					<a href="realiza_compra.html"><input type="button" value="Realizar compra" class="botones"></input></a> 
-				</div>
-				<div class="clear"></div>
+
+
 			</div>
-			
 			
 		</div>
 		
@@ -114,15 +103,15 @@
 				<p>Síguenos en <span><img src="images/facebook-footer.png"></span></p>
 				<p>Sexy Selfwear © 2016 Todos los Derechos Reservados | <a href="mailto:pedidos@sexyselfwear.com.pe">pedidos@sexyselfwear.com.pe</a></p>
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="acerca.html">Acerca de Nosotros</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="acerca.php">Acerca de Nosotros</a></li>
 					<li><a href="">Ropa Íntima</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Ropa Casual</a></li>
 					<li><a href="">Promociones</a></li>
-					<li><a href="contactenos.html">Contáctenos</a></li>
+					<li><a href="contactenos.php">Contáctenos</a></li>
 				</ul>
-				<p><a href="">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
+				<p><a href="terminos_condiciones.php">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
 				<p>Powered by: <a href="http://www.paolanaveda.com" target="_blank"><img src="images/pn-footer.png" width="22" height="25"></a> Paola Naveda</p>
 			</div>
 			
@@ -130,9 +119,13 @@
 	</footer>
 
 
-</body>
-
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+
+    
+
+
+</body>
 
 </html>

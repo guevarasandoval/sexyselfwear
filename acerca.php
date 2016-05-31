@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include 'logic/carrito.php';
+$carrito = new Carrito();
+?>
 <html>
 <head>
 	<title>Siéntete tu misma, vístete sexy</title>
@@ -13,27 +17,22 @@
 	<link rel="stylesheet" href="estilos/reset.css">
 	<link rel="stylesheet" href="estilos/sexyselfwear2.css">
 	<link rel="stylesheet" href="estilos/responsivesexy2.css">
-	<link rel="stylesheet" href="estilos/owl.carousel.css">
+	<link rel="stylesheet" href="estilos/custom-popup.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 	
 </head>
 <body>
 	<header class="ui-cabecera">
 		<div class="caja-centro">
+			
 			<h1 class="ui-title">
 				<img src="images/logo_internas.png" class="img-slider">
 			</h1>
 			
 			<div class="ui-redes-mobile">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="inicia_sesion.html"><img src="images/icon-carrito.png"></a></p>
-					<p class="ui-micuenta"><a href="#"><img src="images/icon-micuenta.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><img src="images/icon-carrito.png"> <span>(<?php echo $carrito->articulos_total(); ?>)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
 				</div>
-				<div class="ui-siguenos">
-					<span>Síguenos en</span>
-					<a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a>
-				</div>
-				
 			</div>
 
 			<div class="ui-nav-site">
@@ -41,8 +40,8 @@
 					<img src="images/icon_menu.png">
 				</p>
 				<ul id="menusite">
-					<li class="activo">Home</li>
-					<li><a href="accesorios.html">Accesorios</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="accesorios.php">Accesorios</a></li>
 					<li><a href="">Moda Casual</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Sleep</a></li>
@@ -51,8 +50,7 @@
 			</div>
 			<div class="ui-redes">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="inicia_sesion.html"><span>Carrito</span> <img src="images/icon-carrito.png"></a></p>
-					<p class="ui-micuenta"><a href="#"><span>Mi cuenta</span> <img src="images/icon-micuenta.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><span>Carrito (<?php echo $carrito->articulos_total(); ?>)</span> <img src="images/icon-carrito.png"></a></p>
 				</div>
 				<div class="ui-siguenos">
 					<span>Síguenos en</span>
@@ -64,32 +62,22 @@
 		</div>
 	</header>
 	<section>
-		<div class="caja-centro ui-slider">
-			<h2 class="ui-slogan">"SIÉNTETE TU MISMA, VÍSTETE SEXY"</h2>
-			<div class="clear"></div>
-			<div class="ui-promociones">
-				<div class="owl-carousel  owl-theme">
-					
-						  <div>
-							  	<h3 class="head-slider"> NO SIEMPRE LA MEJOR CURVA DE UNA MUJER ES SU SONRISA</h3>
-							    <p class="slider-slogan">
-							    	NUEVA <span>COLECCIÓN 2016</span>
-							    </p>
-							    <p class="slider-pie"><a href="">APROVECHA NUESTRAS PROMOCIONES EN EL DÍA DE LA MADRE</a></p>
-						  </div>
+		<div class="caja-centro">
 
-						  <div>
-							  	<h3 class="head-slider"> SI SIEMPRE LA MEJOR CURVA DE UNA MUJER ES SU SONRISA  </h3>
-							    <div class="slider-slogan">
-							    	NUEVA <span>COLECCIÓN 2016</span>
-							    </div>
-							    <p class="slider-pie"><a href="">APROVECHA NUESTRAS PROMOCIONES EN EL DÍA DE LA MADRE</a></p>
-						  </div>
-					  
-					
+			<div class="ui-contenido">
+				
+				<h2>Acerca de Sexy Selfwear</h2>
+				
+
+				<div class="ui-inicia">
+					<p class="textonormal">Somos una empresa peruana y nos dedicamos a satisfacer a mujeres que busquen sentirse ellas mismas y se vistan bien por dentro y lo demuestren por fuera.  Es decir, sexy.  Con diseños originales, con colores y texturas que hacen que se vean bien y se sientan diferentes, sin dejar de lado la calidad y seguridad de los productos que vendemos.</p>
+					<p class="textonormal">Nuestro principal objetivo es transmitir que la lencería no tiene por qué ser cara y un énfasis en la atención al cliente son los pilares de esta empresa.</p>
+					<p class="textonormal">Les invitamos a ser parte de esta gran familia que estamos creando, ya que no es solo una empresa, también es un sueño que estamos cumpliendo.</p>
 				</div>
+
+
 			</div>
-			<div class="clear"></div>
+			
 		</div>
 		
 	</section>
@@ -100,23 +88,29 @@
 				<p>Síguenos en <span><img src="images/facebook-footer.png"></span></p>
 				<p>Sexy Selfwear © 2016 Todos los Derechos Reservados | <a href="mailto:pedidos@sexyselfwear.com.pe">pedidos@sexyselfwear.com.pe</a></p>
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="acerca.html">Acerca de Nosotros</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="acerca.php">Acerca de Nosotros</a></li>
 					<li><a href="">Ropa Íntima</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Ropa Casual</a></li>
 					<li><a href="">Promociones</a></li>
-					<li><a href="contactenos.html">Contáctenos</a></li>
+					<li><a href="contactenos.php">Contáctenos</a></li>
 				</ul>
-				<p><a href="">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
+				<p><a href="terminos_condiciones.php">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
 				<p>Powered by: <a href="http://www.paolanaveda.com" target="_blank"><img src="images/pn-footer.png" width="22" height="25"></a> Paola Naveda</p>
 			</div>
 			
 		</div>
 	</footer>
 
-</body>
+
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/custom-popup.js"></script>
+
+
+    
+
+
+</body>
+
 </html>

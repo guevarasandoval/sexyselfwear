@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include 'logic/carrito.php';
+$carrito = new Carrito();
+?>
 <html>
 <head>
 	<title>Siéntete tu misma, vístete sexy</title>
@@ -18,6 +22,18 @@
 	
 </head>
 <body>
+<?php
+$nombres=$_SESSION["nombres"];
+$apellidos=$_SESSION["apellidos"];
+$email=$_SESSION["email"];
+$telefono=$_SESSION["telefono"];
+$distrito=$_SESSION["distrito"];
+$direccion=$_SESSION["direccion"];
+$referencia=$_SESSION["referencia"];
+$precioflete=$_SESSION["precioflete"];
+$preciofinal=$_SESSION["preciofinal"];
+
+?>
 	<header class="ui-cabecera">
 		<div class="caja-centro">
 			
@@ -27,7 +43,7 @@
 			
 			<div class="ui-redes-mobile">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="carrito.html"><img src="images/icon-carrito.png"> <span>(0)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><img src="images/icon-carrito.png"> <span>(<?php echo $carrito->articulos_total(); ?>)</span></a> / <a href="https://www.facebook.com/sexyselfwear/" target="_blank"><img src="images/icon-f.png"></a></p>
 				</div>
 			</div>
 
@@ -36,8 +52,8 @@
 					<img src="images/icon_menu.png">
 				</p>
 				<ul id="menusite">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="accesorios.html">Accesorios</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="accesorios.php">Accesorios</a></li>
 					<li><a href="">Moda Casual</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Sleep</a></li>
@@ -46,7 +62,7 @@
 			</div>
 			<div class="ui-redes">
 				<div class="ui-cuenta">
-					<p class="ui-carrito"><a href="carrito.html"><span>Carrito (0)</span> <img src="images/icon-carrito.png"></a></p>
+					<p class="ui-carrito"><a href="carrito.php"><span>Carrito (<?php echo $carrito->articulos_total(); ?>)</span> <img src="images/icon-carrito.png"></a></p>
 				</div>
 				<div class="ui-siguenos">
 					<span>Síguenos en</span>
@@ -89,62 +105,71 @@
 
 								<!-- nuevo producto -->
 								
-								<div class="ui-detalleproductocarrito-confirmar">
-									<p class="nombrecarrito-confirmar">
-										Bolsa de lavado de poliéster
-									</p>
-									<p class="tallaproductocarrito">
-										Talla: <span>12</span>
-									</p>
-									<p class="tallaproductocarrito">
-										Color: <span>122</span>
-									</p>
-								</div>
-								<div class="ui-preciouno-confirmar">
-									<p class="precioproductocarrito">
-										S/.29.00
-									</p>
-								</div>
-								<div class="ui-cantidad-confirmar">
-									<p class="tallaproductocarrito">
-										<span>1</span>
-									</p>
-								</div>
+								<?php
 								
-								<div class="ui-subtotalcarrito-confirmar">
-									<p><span>S/.29.00</span></p>
-									
-								</div>
-								<p class="ui-carritoconfimar-separacion"></p>
+								$carro = $carrito->get_content();
+								if($carro)
+								{
+									foreach($carro as $producto)
+									{
+										echo "
+											<div class='ui-detalleproductocarrito-confirmar'>
+												<p class='nombrecarrito-confirmar'>
+													".
+													$producto["nombre"].
+													"
+												</p>
+												<p class='tallaproductocarrito'>
+													Talla: <span>
+													".
+													$producto["talla"].
+													"
+													</span>
+												</p>
+												<p class='tallaproductocarrito'>
+													Color: <span>
+													".
+													$producto["color"].
+													"
+													</span>
+												</p>
+											</div>
+											<div class='ui-preciouno-confirmar'>
+												<p class='precioproductocarrito'>
+													S/.".
+														$producto["precio"].
+														"
+												</p>
+											</div>
+											<div class='ui-cantidad-confirmar'>
+												<p class='tallaproductocarrito'>
+													<span>
+													".
+													$producto["cantidad"].
+													"
+													</span>
+												</p>
+											</div>
+											
+											<div class='ui-subtotalcarrito-confirmar'>
+												<p><span>S/.".number_format((float)$producto["precio"]*$producto["cantidad"], 2, '.', '')."</span></p>
+												
+											</div>
+											<p class='ui-carritoconfimar-separacion'></p>
+																														
+										";
+										
+										
+									}
+								}
 
-								<!-- nuevo producto -->
 								
-								<div class="ui-detalleproductocarrito-confirmar">
-									<p class="nombrecarrito-confirmar">
-										Bolsa de lavado de poliéster
-									</p>
-									<p class="tallaproductocarrito">
-										Talla: <span>12</span>
-									</p>
-									<p class="tallaproductocarrito">
-										Color: <span>122</span>
-									</p>
-								</div>
-								<div class="ui-preciouno-confirmar">
-									<p class="precioproductocarrito">
-										S/.29.00
-									</p>
-								</div>
-								<div class="ui-cantidad-confirmar">
-									<p class="tallaproductocarrito">
-										<span>1</span>
-									</p>
-								</div>
+								?>
 								
-								<div class="ui-subtotalcarrito-confirmar">
-									<p><span>S/.29.00</span></p>
-									
-								</div>
+								
+								
+
+								
 								<!--fin productos-->
 							</div>
 
@@ -152,14 +177,14 @@
 
 							
 							<div class="ui-subtotalconfirmacarrito">
-								<p class="subtotal"><span>S/.29.00</span></p>
-								<p class="flete"><span> S/.5.50</span></p>
-								<p class="total">S/.34.50</p>
+								<p class="subtotal"><span>S/.<?php echo number_format((float)$carrito->precio_total(), 2, '.', ''); ?></span></p>
+								<p class="flete"><span> S/.<?php echo number_format((float)$precioflete, 2, '.', ''); ?></span></p>
+								<p class="total">S/.<?php echo number_format((float)$preciofinal, 2, '.', ''); ?></p>
 								 
 							</div>
 							<div class="ui-subtotalconfirmanombres">
 								<p class="subtotal">SUBTOTAL:</p>
-								<p class="flete">Gastos de envío (San Miguel): </p>
+								<p class="flete">Gastos de envío (<?php echo $distrito; ?>): </p>
 								<p class="total">TOTAL</p>
 								 
 							</div>
@@ -171,6 +196,7 @@
 						</div>
 						<div class="ui_confirmacampo">
 							<p class="ui-subti-realizacompra">Datos de Envío</p>
+							<!--
 							<div class="labelcampos">
 								<label>Departamento: </label> <div>LIMA</div>
 							</div>
@@ -178,33 +204,34 @@
 								<label>Provincia: </label>
 								<div>LIMA</div>
 							</div>
+							-->
 							<div class="labelcampos">
 								<label>Distrito: </label>
-								<div>SAN MIGUEL</div>
+								<div><?php echo $distrito; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Dirección: </label>
-								<div>Calle Santa Eduviges 476 Dpto. 301 Urb. Pando</div>
+								<div><?php echo $direccion; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Referencia: </label>
-								<div>Entre la cuadra 15 y 16 de av. Universitaria</div>
+								<div><?php echo $referencia; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Nombres: </label>
-								<div>Paola</div>
+								<div><?php echo $nombres; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Apellidos: </label>
-								<div>Naveda</div>
+								<div><?php echo $apellidos; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Email: </label>
-								<div>paolanaveda@gmail.com</div>
+								<div><?php echo $email; ?></div>
 							</div>
 							<div class="labelcampos">
 								<label>Teléfono: </label>
-								<div>997903978</div>
+								<div><?php echo $telefono; ?></div>
 							</div>
 
 							<p class="ui-subti-realizacompra">Forma de pago</p>
@@ -230,15 +257,15 @@
 				<p>Síguenos en <span><img src="images/facebook-footer.png"></span></p>
 				<p>Sexy Selfwear © 2016 Todos los Derechos Reservados | <a href="mailto:pedidos@sexyselfwear.com.pe">pedidos@sexyselfwear.com.pe</a></p>
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a href="acerca.html">Acerca de Nosotros</a></li>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="acerca.php">Acerca de Nosotros</a></li>
 					<li><a href="">Ropa Íntima</a></li>
 					<li><a href="">Ropa de Baño</a></li>
 					<li><a href="">Ropa Casual</a></li>
 					<li><a href="">Promociones</a></li>
-					<li><a href="contactenos.html">Contáctenos</a></li>
+					<li><a href="contactenos.php">Contáctenos</a></li>
 				</ul>
-				<p><a href="">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
+				<p><a href="terminos_condiciones.php">Términos y Condiciones</a> | <a href="">Políticas de Privacidad</a></p>
 				<p>Powered by: <a href="http://www.paolanaveda.com" target="_blank"><img src="images/pn-footer.png" width="22" height="25"></a> Paola Naveda</p>
 			</div>
 			
@@ -247,38 +274,9 @@
 
 
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
-<script type="text/javascript" src="js/custom-popup.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
-<!-- producto 1 -->
-	<div class="popupbox" id="popuprel1">
-        <div style="text-align: right;"><a href="#" class="close"><img src="images/close.gif"></a></div>
-        <div class="intabdiv">
-            <div class="productoimg"><img src="images/catalogo/ac_001_l.png" class="img-slider"></div>
-            <div class="prodescrip">
-                      <h2>Bolsa de lavado de poliéster S/.29.00</h2>
-                      <h3>Descripción:</h3>
-                      <p>Con cierre y con dos estructuras para dar mayor soporte, una en la parte superior y otra en la parte inferior.</p> 
-            </div>
-        </div>
-        <div class="btncomprar"><a href="#">Agregar al carrito</a></div>
-	</div>
-	<!-- producto 2 -->
-	<div class="popupbox" id="popuprel2">
-		<div style="text-align: right;"><a href="#" class="close"><img src="images/close.gif"></a></div>
-        <div class="intabdiv">
-            <div class="productoimg"><img src="images/catalogo/ac_002_l.jpg" class="img-slider"></div>
-            <div class="prodescrip">
-                      <h2>Broches extensores S/.15.00</h2>
-                      <h3>Descripción:</h3>
-                           <p>Para brasieres con broche doble<br>Para mayor comodidad en la espalda<br>
-                           No los tienes que coser<br>
-                           PAQUETE x 3<br>
-                           Surtido: blanco, negro y beige</p> 
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="btncomprar"><a href="#">Agregar al carrito</a></div>
-	</div>
+
     
 
 
